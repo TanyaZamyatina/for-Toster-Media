@@ -1,0 +1,283 @@
+@font-face {
+    font-family:'Gotham Pro';
+    font-weight: 400;
+    font-style: normal;
+    src: local('Gotham Pro'),
+        local('gothampro'),
+        url('fonts/gothampro.woff2') format('woff2'),
+        url('fonts/gothampro.woff') format('woff'),
+        url('fonts/gothampro.eot') format('eot');
+    font-display: swap;
+}
+
+@font-face {
+    font-family:'Gotham Pro';
+    font-weight: 700;
+    font-style: normal;
+    src: local('Gotham Pro Bold'),
+        local('gothampro_bold'),
+        url('fonts/gothampro_bold.woff2') format('woff2'),
+        url('fonts/gothampro_bold.woff') format('woff'),
+        url('fonts/gothampro_bold.eot') format('eot');
+    font-display: swap;
+}
+
+* {
+    outline: none;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Gotham Pro";
+    font-weight: 400;
+    color: #000;
+    background-color: #F0F0F0;
+}
+
+header {
+    text-align: center;
+}
+
+.header {
+    width: 100%;
+    height: 33px;
+    background-color: #F19D2F;
+    line-height: 33px;
+}
+
+.header > img {
+    width: 320px;
+}
+
+.underHeader {
+    width: 100%;
+    height: 92px;
+    background-color: #FFD1AC;
+    padding-top: 19px;
+}
+
+.wrapperHeader {
+    position: relative;
+    width: 218px;
+    margin: 0 auto; 
+}
+
+.wrapperHeader > span {
+    position:absolute;
+    top: 8px;
+    left: 149px;
+    display: block;
+    width: 15px;
+    height: 15px;
+    background-color: #F19D2F;
+    border-radius: 50%;
+}
+
+.wrapperHeader > p {
+    font-size: 14px;
+}
+
+.main {
+    position: relative;
+    box-sizing: border-box;
+    background: url(img/1.png) no-repeat 50% 50%;
+    background-size: contain;
+    height: 0;
+    width: 100%;
+    padding-bottom: 72%;
+}
+
+.timer {
+    position: absolute;
+    bottom: 14px;
+    left: 13px;
+    width: 110px;
+    height: 58px;
+    background-color: #F19D2F;
+    color: #fff;
+    border-radius: 7px;
+    padding: 9px 7px;
+    font-weight: 700;
+    text-align: center;
+}
+
+.timer > p:first-of-type {
+    font-size: 10px;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+.timer > p:last-of-type {
+    font-size: 21px;
+}
+
+.price {
+    position: absolute;
+    bottom: 14px;
+    right: 13px;
+    width: 116px;
+    height: 58px;
+    background-color: #37D997;
+    color: #fff;
+    border-radius: 7px;
+    padding: 7px;
+    font-weight: 700;
+    text-align: center;
+}
+
+.price > p:first-of-type {
+    font-size: 18px;
+}
+
+.price > p:last-of-type {
+    font-size: 22px;
+    margin-top: -4px;
+}
+
+#discount::after {
+    content: "";
+    position: relative;
+    bottom: 13px;
+    left: 11px;
+    display: block;
+    width: 80px;
+    height: 4px;
+    border-radius: 3px;
+    background-color: #E27500;
+}
+
+.choice {
+    margin: 11px 16px 41px 16px;
+}
+
+.description {
+    display: flex;
+    font-size: 12px;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.description > div {
+    display: flex;
+    align-items: flex-end;
+    font-weight: 700;
+}
+
+.otherColor {
+    color: #37D997;
+    text-decoration: underline;
+}
+
+h1 {
+    font-size: 20px;
+    text-transform: uppercase;
+    margin-top: 20px;
+}
+
+.mainImg {
+    width: 100%;
+    margin-top: 20px;
+}
+
+.choiceSlippers {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    width: 100%;
+    margin-top: 20px;
+}
+
+.choiceSlippers > img {
+    min-width: 60px;
+    cursor: pointer;
+}
+
+#black {
+    opacity: 40%;
+}
+
+.delivery {
+    margin-top: 20px;
+}
+
+.shipping {
+    margin-top: 12px;
+    width: 300px;
+}
+
+.grade {
+    display: flex;
+    gap: 10px;
+    margin-top: 12px;
+}
+
+.choiceColorSize {
+    margin: 20px 0;
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.choiceColorSize > div {
+    width: 50%;
+}
+
+.choiceColor, .choiceSize {
+    height: 50px;
+    background-color: #fff;
+    border-radius: 15px;
+    text-align: center;
+    font-size: 21px;
+    font-weight: 700;
+    line-height: 50px;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+.choiceSize {
+    padding-left: 23px;
+}
+
+.choiceColor > span, .choiceSize > span {
+    display: inline-block;
+}
+
+.color, .size {
+    font-size: 10px;
+    text-align: center;
+    margin-bottom: 5px;
+}
+
+.listColor, .listSize {
+    display: none;
+    flex-direction: column;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    background-color: #fff;
+    text-align: center;
+    font-size: 22px;    
+    font-weight: 700;
+    line-height: 50px;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+.hide {
+    display: flex;
+}
+
+.btn {
+    display: inline-block;
+    width: 100%;
+    height: 50px;
+    border-radius: 15px;
+    background-color: #37D997;
+    padding: 10px 20px;
+    font-size: 30px;
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    text-align: center;
+}
